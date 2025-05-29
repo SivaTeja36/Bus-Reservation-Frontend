@@ -83,6 +83,18 @@ export interface UserCreationRequest {
   branch_id: number;
 }
 
+export interface GetUserResponse {
+  id: number;
+  name: string;
+  email: string;
+  contact: string;
+  role: string;
+  branch_id: number;
+  created_at: string;
+  updated_at: string;
+  is_active: boolean;
+}
+
 export interface ApiResponse<T> {
   status_message: string;
   data: T;

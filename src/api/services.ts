@@ -10,6 +10,7 @@ import {
   TicketRequest,
   GetTicketResponse,
   UserCreationRequest,
+  GetUserResponse
 } from '../types';
 
 // Branches
@@ -43,3 +44,6 @@ export const createTicket = (data: TicketRequest) =>
 // Users
 export const createUser = (data: UserCreationRequest) =>
   apiClient.post<ApiResponse<{ message: string }>>('/admin/users', data);
+
+export const getUsers = () =>
+  apiClient.get<ApiResponse<GetUserResponse[]>>('/admin/users');
